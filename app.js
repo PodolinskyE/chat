@@ -52,6 +52,7 @@ module.exports = app;
 var index = require('routes/index');
 var services = require('routes/services');
 var users = require('routes/users');
+var models = require('routes/models');
 
 // middleWares
 var favicon = require('serve-favicon');
@@ -98,8 +99,9 @@ app.get('/', function ( req, res, next ) {
 
 
 app.use('/', index);
-app.use('/users', users);
-
+app.use('/users*', users);
+app.use('/services*', services);
+app.use('/models*', models);
 
 
 
