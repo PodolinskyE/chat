@@ -1,0 +1,20 @@
+doctype html
+html
+	header
+		title= title
+		link(rel='stylesheet', href='/vendor/bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/css/style.css')
+		block scripts
+			script(src='/vendor/bower_components/jquery/dist/jquery.js')
+			script(src='/vendor/bower_components/bootstrap/dist/js/bootstrap.js')
+	body
+		block header
+			header
+				include includes/navigation.pug
+		block content
+		block footer
+			footer
+				#footer
+					p developed by : #{developer}
+		block postScripts
+			script(src='/js/hello.js')

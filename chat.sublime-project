@@ -1,0 +1,30 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".*",
+				"_*",
+				"xpdfrc",
+				"node",
+				"*.bat",
+				"*.sh",
+				"*.cmd",
+				"*.data",
+				"*.exe",
+				"*.log",
+				"*.png",
+				"*.recover",
+				"*.sublime-build",
+				"*.sublime-project",
+				"*.sublime-workspace",
+				"*.txt",
+				"*.zip",
+				"package-lock.json",
+				"package.json"
+			],
+			"path": "."
+		}
+	]
+}

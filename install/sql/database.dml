@@ -1,0 +1,16 @@
+
+"SELECT * FROM pg_database WHERE datname = '" + dbData.dbName + "'";
+
+DO
+$body$
+BEGIN
+	IF NOT EXISTS ( SELECT FROM pg_catalog.pg_user WHERE usename = 'chatCreator' )
+	THEN
+		CREATE ROLE "chatCreator" LOGIN
+			-- ENCRYPTED PASSWORD 'md543e58eb54a9f776fc942003ac26ceb9c'
+			PASSWORD 'qwe123'
+			SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+		COMMENT ON ROLE "chatCreator" IS 'Основноая роль разработчика чата';
+	END IF;
+END
+$body$;

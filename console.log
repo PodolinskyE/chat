@@ -1,0 +1,40 @@
+rem console.log
+
+npm i -g express
+npm install express-generator -g
+
+
+express --view=pug --git
+
+npm install express --save
+npm install express-session --save
+npm i
+
+rem npm start
+rem or
+node --inspect ./bin/www "./app.js"
+
+
+rem express --help
+
+
+npm i nconf --save
+npm i winston --save
+
+
+
+rem для управления библиотеками frontend-а
+npm i -g bower
+cd public_src
+mkdir vendor
+cd vendor
+bower i jquery bootstrap
+cd ..
+
+cd install
+node install
+cd ..
+
+
+rem  stopped chat-1.mp4 00:11:00
+
