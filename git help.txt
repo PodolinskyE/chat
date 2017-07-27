@@ -1,0 +1,111 @@
+https://github.com/rolling-scopes/front-end-course/wiki/Git-guidelines
+
+git --help
+
+git config --global --list
+git config --global user.email "podolinsky.e@gmail.com"
+git config --global user.name "podolinskyE
+
+cloning repo
+git clone https://github.com/photonstorm/phaser-ce.git
+
+
+================================================================================
+# creating repo from local terminal
+curl -u 'PodolinskyE' https://api.github.com/user/repos -d '{"name":"chat"}'
+git init
+
+echo ".idea" >> .gitignore
+echo "vendor" >> .gitignore
+echo "node_modules" >> .gitignore
+echo "*.bundle.js" >> .gitignore
+echo "*.sublime-workspace" >> .gitignore
+echo "!!__test" >> .gitignore
+git add .
+git status
+git commit -m "chat installator making started"
+git remote add origin https://github.com/PodolinskyE/chat.git
+git push -u origin master
+git status
+clear
+exit
+================================================================================
+
+
+================================================================================
+# creating repo from local terminal
+curl -u 'PodolinskyE' https://api.github.com/user/repos -d '{"name":"CV"}'
+git init
+# printf "/temp/*\n.*" >> .gitignore
+git add .
+git commit -m "CV on half year experience"
+git remote add origin https://github.com/PodolinskyE/CV.git
+git push -u origin master
+git status
+clear
+exit
+================================================================================
+
+
+
+
+
+
+
+
+git add README.md
+
+git commit
+git commit -m "feature: update readme & ignores"
+
+comments on commits :
+binary-tree/feature: implement traverse method
+
+
+
+git status
+git push origin [branch-name]
+
+перейти на ветку
+git checkout -b branch-name
+
+
+
+
+
+branch rename
+
+git branch -m old_branch new_branch – переименовать локальную ветку
+git push origin :old_branch – удалить старую ветку
+git push --set-upstream origin new_branch – выгрузить новую ветку и "закрепить" ее за локальной веткой
+
+
+
+
+create new branch on github
+
+echo "# canvasCad" >> README.md
+echo "/temp/*" >> .gitignore
+git init
+git add .
+git status
+git commit -m "presentation init"
+git status
+git remote add origin https://github.com/PodolinskyE/canvasCad.git
+git push -u origin master
+git status
+
+
+
+
+================================================================================
+git pull - скачивает изменения из репы и автоматически пытается смерджить с локальными исходниками
+git fetch - только скачивает изменения из репы
+git diff - показывает изменения
+
+
+
+
+
+================================================================================
+заливка изменений
