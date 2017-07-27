@@ -55,6 +55,7 @@ function logResult ( err, out, eout ) {
 
 function Installator () {
 	var i = this;
+	i.taskchain = [];
 	i.loader = loader;
 	i.messagesColored = messagesColored;
 	i.wcolor = wcolor;
@@ -63,11 +64,20 @@ function Installator () {
 };
 
 Installator.prototype.start = function () {
-	this.createRoles( function ( e, o, eo ) {
+	var i = this;
+	i.createRoles( function ( e, o, eo ) {
 		logResult( e, o, eo );
 		// this.message();
 		// next();
-		console.log('Install Completed!');
+		i.createDatabase( function ( e, o, eo ) {
+			logResult( e, o, eo );
+			
+			i.populateDatabase(function ( e, o, eo ) {
+				logResult( e, o, eo );
+				
+				console.log('Install Completed!');	
+			});
+		});
 	});
 };
 
@@ -79,8 +89,21 @@ Installator.prototype.createRoles = function ( cb ) {
 };
 
 
+Installator.prototype.createDatabase = function ( cb ) {
+	var file = "./sql/database.ddl";
+	this.loader.load( file, cb );
+	// return this;
+};
 
 
+Installator.prototype.populateDatabase = function ( cb ) {
+	var file = "./sql/database.dml";
+	this.loader
+		.pgoptions({ db:'chat', quiet:true, echo: false })
+		.load( file, cb )
+	;
+	// return this;
+};
 
 new Installator();
 

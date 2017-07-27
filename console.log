@@ -30,6 +30,7 @@ mkdir vendor
 cd vendor
 bower i jquery bootstrap
 cd ..
+cd ..
 
 cd install
 node install

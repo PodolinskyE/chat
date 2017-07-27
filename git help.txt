@@ -21,6 +21,16 @@ echo "node_modules" >> .gitignore
 echo "*.bundle.js" >> .gitignore
 echo "*.sublime-workspace" >> .gitignore
 echo "!!__test" >> .gitignore
+
+echo "root = true" >> .editorconfig
+echo "[*]" >> .editorconfig
+echo "end_of_line = lf" >> .editorconfig
+echo "insert_final_newline = true" >> .editorconfig
+echo "[*.js]" >> .editorconfig
+echo "charset = utf-8" >> .editorconfig
+echo "indent_style = tab" >> .editorconfig
+echo "indent_size = 2" >> .editorconfig
+
 git add .
 git status
 git commit -m "chat installator making started"
@@ -103,9 +113,12 @@ git pull - скачивает изменения из репы и автомат
 git fetch - только скачивает изменения из репы
 git diff - показывает изменения
 
-
+git merge
 
 
 
 ================================================================================
 заливка изменений
+git add . - добавление всех
+git commit -m "gitignore added archives"
+git push -u origin master
