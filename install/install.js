@@ -14,17 +14,11 @@ loader.pgoptions({host: null, port: null, db: null, quiet: true, echo: false});
 //  array of arrays [ text, color ]
 var messagesColored = [
 	
-		['Установка СЭД \'DocNode\' на локальной машине', 'yellow']
+		['Установка программы \'peChatь\' на локальной машине', 'yellow']
 	, ['PosgreSQL 9.4.4^ должен быть установлен.', 'gray']
 	, ['Директория установки postgreSQL\\bin должна быть прописана в переменной PATH', 'gray']
-	
-	// , ['1. Создание системных ролей', 'white']
-	// , ['2. Создание базы admin и инициализация структуры']
-	// , ['3. Создание базы шаблона и инициализация структуры']
-	// , ['4. Инициализация системных данных']
 	, ['1. Создания базы приложения']
 	, ['2. Заполнение тестовыми данными']
-
 ];
 
 //  output message with selected or last color

@@ -2,9 +2,18 @@ https://github.com/rolling-scopes/front-end-course/wiki/Git-guidelines
 
 git --help
 
+
+# settings
+
 git config --global --list
 git config --global user.email "podolinsky.e@gmail.com"
 git config --global user.name "podolinskyE
+git config --global core.autocrlf false
+
+
+
+
+
 
 cloning repo
 git clone https://github.com/photonstorm/phaser-ce.git
@@ -122,3 +131,14 @@ git merge
 git add . - добавление всех
 git commit -m "gitignore added archives"
 git push -u origin master
+
+
+
+================================================================================
+# git diff settings
+git config --global merge.tool &
+git config --global mergetool.kdiff3.cmd \
+    'kdiff3 "$BASE" "$LOCAL" "$REMOTE" "$MERGED"' &
+git config --global mergetool.trustExitCode false &
+git config --global diff.external kdiff3
+================================================================================

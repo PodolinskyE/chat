@@ -73,7 +73,7 @@ var app = express();
 app.set('port', config.get('port'));
 
 // view engine setup
-app.set('views', path.join(__dirname, 'templates'));
+app.set('views', path.join(__dirname, 'templates'));	
 app.set('view engine', 'pug');
 
 
@@ -188,5 +188,6 @@ function normalizePort(val) {
 
 var server = http.createServer(app);
 server.listen(config.get('port'), function () {
-	log.info('listening on port ' + config.get('port'));
+	console.log('\n');
+	log.info('Node server listening on ' + config.get('host') + ':' + config.get('port'));
 });
