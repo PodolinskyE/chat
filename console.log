@@ -38,4 +38,6 @@ cd ..
 
 
 rem  stopped chat-1.mp4 00:11:00
+npm i --save pg
 
+? npm install --save sequelize
