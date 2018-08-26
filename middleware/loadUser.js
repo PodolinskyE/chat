@@ -1,0 +1,19 @@
+// /middleware/loadUser.js
+
+var User = require('models/user').User;
+
+module.exports = function ( req, res, next ) {
+	if ( !req.session.user ) { return next(); }
+	
+	// get user data from database if exist
+	
+	/*
+	User.findById( req.session.user, function ( err, user ) {
+		if ( err ) {return next( err ); }
+		
+		req.user = user;
+		next();
+	});
+	*/
+	
+}
